@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력 양식 태그 연습2</title>
+</head>
+<body>
+    <form>
+        1.color
+        <input type="color"/> <br>
+        2.date
+        <input type="date"/> <br>
+        3.datetime
+        <input type="datetime"/> <br>
+        4.datetime-local
+        <input type="datetime-local"/> <br>
+        5.email
+        <input type="email"/> <br> 
+        6.month
+        <input type="month"/> <br>
+        7.number
+        <input type="number"/> <br>
+        8.range
+        <input type="range"/> <br>
+        9.search
+        <input type="search"/> <br>
+        10.tel
+        <input type="tel"/> <br>
+        11.time
+        <input type="time"/> <br>
+        12.url
+        <input type="url"/> <br>
+        13.week
+        <input type="week"/> <br>
+        14.textarea
+        <textarea cols="30">여기에 입력하세요</textarea>
+        <!--datetime, email, number, search, tel, url 그냥 입력 창이랑 뭐가 다른지?-->
+    </form>
+    15.select
+    <select>
+        <option>치킨</option>
+        <option>피자</option>
+        <option>떡볶이</option>
+    </select>
+    16.multiple
+    <select multiple="multiple">
+        <option>치킨</option>
+        <option>피자</option>
+        <option>떡볶이</option>
+    </select>
+    17.optgroup
+    <select multiple="multiple">
+        <optgroup label="음식">
+            <option>치킨</option>
+            <option>피자</option>
+            <option>떡볶이</option>
+        </optgroup>
+        <optgroup label="음료">
+            <option>탄산</option>
+            <option>커피</option>
+            <option>차</option>
+        </optgroup>
+    </select>
+    18.fieldset, legend
+    <form action="2-9.html" method="get">
+        <fieldset>
+            <legend>로그인</legend>
+            <table>
+                <tr>
+                    <td><label for="id">아이디</label></td>
+                    <td><input type="text" id="id" name="id"/></td>
+                </tr>
+                <tr>
+                    <td><label for="pw">비밀번호</label></td>
+                    <td><input type="password" id="pw"/></td>
+                </tr>
+            </table>
+            <input type="submit" value="로그인"/>
+        </fieldset>
+    </form>
+</body>
+</html>
