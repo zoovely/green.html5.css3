@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응 선택자와 형태 선택자</title>
+    <style>
+        h1:hover {color: red;}
+        h1:active {color: blue;}
+        input:enabled {background-color:salmon;}
+        input:disabled {background-color:sandybrown;}
+        input:focus {background-color: skyblue;}
+        input[type=checkbox]:checked + h1 {color: slateblue;}
+    </style>
+</head>
+<body>
+    <input type="checkbox"/>
+    <h1>클릭하세요</h1>
+    <input type="text" />
+    <input disabled="disabled"/>
+ 
+</body>
+</html>
