@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display 속성</title>
+    <style>
+        p:nth-child(2) {
+            visibility: hidden;
+        }
+        p:nth-child(4) {
+            display: none;
+        }
+        p:nth-child(3),p:nth-child(5) {
+            display: inline;
+        }
+        p:nth-child(1) {
+            background-color: blueviolet;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum</p>
+    <p>hahaha</p>
+    <p>Lorem ipsum</p>
+    <p>hahaha</p>
+    <p>Lorem ipsum</p>
+</body>
+</html>
