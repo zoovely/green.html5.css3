@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float을 이용한 레이아웃 구성</title>
+    <style>
+        body {
+            width : 960px;
+            margin: 0 auto;
+        }
+        #aside {
+            float:left;
+            width: 200px;
+        }
+        #section {
+            float: left;
+            width: 760px;
+        }
+        #wrap {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="header"><h1>Header</h1></div>
+    <div id="navigation"><h1>Navigation</h1></div>
+    <div id="wrap">
+        <div id="aside">
+            <h1>Aside</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio tenetur culpa nam, praesentium doloribus sint sunt labore neque iure dolorem! Dignissimos aliquid quaerat illum minus ipsam ad inventore quibusdam officia? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus sit nesciunt recusandae velit nisi earum esse magnam, quo eaque! Cumque obcaecati commodi earum ex ea doloribus molestias illum eaque error? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, sint. Accusantium ut, cupiditate est similique fugiat perferendis quos voluptas laborum nesciunt vel voluptatem omnis minus illum unde non placeat delectus. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto numquam dicta provident aspernatur modi sit dolores tenetur officiis corrupti consequuntur, nulla sed aliquam alias exercitationem cum tempore, quod recusandae blanditiis?</p>
+        </div>
+        <div id="section">
+            <h1>Section</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores inventore, sint atque corrupti obcaecati impedit debitis laudantium, ullam beatae sequi, quia sunt? Alias repellendus dolor, maxime rerum totam fuga perferendis? Lorem ipsum dolor, sit amet consectetur adipisicing elit. A rem error expedita blanditiis incidunt, doloribus minima praesentium officiis illum deserunt quasi? Illo, dolore dolorem hic magnam vitae ut enim minus? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, nostrum. Aut aperiam doloribus itaque quibusdam nulla. Architecto soluta hic asperiores officiis nam. Sequi eaque ea quis perferendis provident dolorum ipsam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur quo nesciunt quos doloremque fuga nobis quisquam voluptate aliquam rem earum aliquid, temporibus aperiam enim quibusdam iure sed. Aperiam, illum officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas repudiandae sunt cumque accusamus, sed debitis error velit nam, pariatur, ipsam inventore? Perferendis repellendus temporibus id consequuntur quam ut, quae omnis!</p>
+        </div>
+    </div>
+    <div id="footer"><h1>Footer</h1></div>
+</body>
+</html>
