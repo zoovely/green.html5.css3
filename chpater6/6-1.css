@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+/* 초기화 */
+* {margin: 0; padding: 0;}
+body {font-family: 'Helvetica', serif;}
+li {list-style: none;}
+a {text-decoration: none;}
+/* 헤더 */
+#main_header {
+    height: 45px;
+    background: url('header_background.png');
+    position: relative;
+    text-align: center;
+    line-height: 45px;
+}
+#main_header > h1 {
+    color: white;
+}
+#main_header > a, #main_header > label {
+    display: block;
+    height: 32px;
+    position: absolute;
+}
+#main_header > a.left {
+    width: 62px;
+    left: 5px; top: 7px;
+}
+#main_header > label.right {
+    width: 32px;
+    right: 5px; top: 7px;
+}
+/* 스프라이트 이미지 */
+#main_header > a.left {
+    background: url('sprites.png');
+    background-position: 0px 0px;
+    text-indent: -99999px; /*태그 내부의 글자를 화면 밖으로 밀어내기 위해*/
+}
+#main_header > label.right {
+    background: url('sprites.png');
+    background-position: -62px 0px;
+    text-indent: -99999px; 
+}
+/* 토글 목록 */
+#toggle {
+    display: none;
+}
+#toggle + #wrap > #toggle_gnb_wrap {
+    display: none;
+}
+#toggle:checked + #wrap > #toggle_gnb_wrap {
+    display: block;
+}
+#toggle_gnb_wrap {
+    background: #363636;
+    padding: 15px;
+}
+#toggle_gnb {
+    background: #FFFFFF;
+    padding: 5px;
+}
+#toggle_gnb > ul {
+    overflow: hidden;
+}
+#toggle_gnb > ul > li {
+    width: 80px;
+    float: left;
+}
+/* 내비게이션1 */
+#top_gnb {
+    overflow: hidden;
+    border-bottom: 1px solid black;
+    background: #B42111;
+}
+#top_gnb > div > a {
+    float: left;
+    width: 25%; /*버튼이 네개이므로 25%씩 공간 차지(수평정렬)*/
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: white;
+}
+/* 내비게이션2 */
+#bottom_gnb {
+    display: table;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+#bottom_gnb > div {
+    display: table-cell;
+    position: relative;
+}
+#bottom_gnb > div > a {
+    display: block;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+}
+#bottom_gnb > div > a::before {
+    display: block;
+    position: absolute;
+    top: 9px; left: -1px;
+    width: 1px; height: 15px;
+    border-left: 1px solid black;
+    content: '';
+}
+/* 본문 */
+#section_header {
+    padding: 20px;
+}
+#section_article {
+    padding: 10px;
+}
+/* 푸터 */
+#main_footer {
+    padding: 10px;
+    border-top: 3px solid black;
+    text-align: center;
+}
