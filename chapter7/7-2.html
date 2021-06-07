@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고정 바</title>
+    <style>
+        * {margin:0; padding:0;}
+        html,body {height: 100%;}
+        #top_bar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: 50px;
+            background: red;
+        }
+        #bottom_bar {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            height: 50px;
+            background: red;
+        }
+        #left_bar {
+            position: fixed;
+            top: 50px; bottom: 50px; left: 0;
+            width: 50px;
+            background: blue;
+        }
+        #right_bar {
+            position: fixed;
+            top: 50px; bottom: 50px; right: 0;
+            width: 50px;
+            background: blue;
+        }
+        article {
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="top_bar">
+        <h1>Top_Bar</h1>
+    </div>
+    <div id="bottom_bar">
+        <h1>Bottom_Bar</h1>
+    </div>
+    <div id="left_bar">
+        <h1>A</h1>
+    </div>
+    <div id="right_bar">
+        <h1>B</h1>
+    </div>
+    <article>
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quasi, vitae fugiat, officiis dolorum rerum mollitia ullam adipisci eveniet consequuntur laudantium et, saepe atque odit eligendi illum officia odio blanditiis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea blanditiis repudiandae est eius consectetur enim asperiores eligendi earum, nostrum tenetur obcaecati pariatur explicabo quia illum, hic tempore, non ad temporibus Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi animi eligendi aperiam nulla aliquam exercitationem pariatur fugit eaque similique explicabo ipsa optio, est non, quo quidem sed debitis vel adipisci!.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti est doloribus possimus, ipsam, itaque officia blanditiis inventore totam debitis iste ex repudiandae ut consequatur eveniet exercitationem aperiam nisi incidunt odio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque similique facere laborum impedit eius ab quibusdam fuga commodi eos nulla, ducimus dolor, natus incidunt consectetur eveniet perferendis quisquam nostrum sit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam saepe laborum rerum odit doloremque eaque optio delectus recusandae vel voluptatem vitae incidunt sit quisquam molestiae corporis, maiores at? Nisi, esse.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque natus blanditiis suscipit culpa nisi illo assumenda modi aut exercitationem doloremque. Magnam eveniet illum mollitia tempora animi odio deserunt molestias dolorem! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit esse vel, deserunt voluptate quod obcaecati id quia ducimus quos reprehenderit eius itaque asperiores, aperiam eligendi optio facere maxime ipsam porro. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ad libero, quae fugit ducimus ipsum quaerat expedita vitae, hic optio fugiat explicabo ipsam quam est. Reiciendis inventore libero facere quibusdam!</p>
+    </article>
+</body>
+</html>

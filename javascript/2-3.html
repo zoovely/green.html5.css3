@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*산술 연산자*/
+        var num1=15;
+        var num2=2;
+        var result;
+        result=num1+num2;
+        document.write(result,"<br>");
+        result=num1-num2;
+        document.write(result,"<br>");
+        result=num1*num2;
+        document.write(result,"<br>");
+        result=num1/num2;
+        document.write(result,"<br>");
+        result=num1%num2;
+        document.write(result,"<br>");
+        /*문자 결합 연산자*/
+        var t1="학교종이";
+        var t2=" 땡땡땡 ";
+        var t3=8282;
+        var t4=" 어서 모이자";
+        result=t1+t2+t3+t4;
+        document.write(result,"<br>");
+        /*대입 연산자*/
+        num1=10;
+        num2=3;
+        num1+=num2;
+        document.write(num1,"<br>");
+        num1-=num2;
+        document.write(num1,"<br>");
+        num1*=num2;
+        document.write(num1,"<br>");
+        num1/=num2;
+        document.write(num1,"<br>");
+        num1%=num2;
+        document.write(num1,"<br>");
+        /*대입 연산자(table)*/
+        var str="<table border='1'>";
+        str+="<tr>";
+        str+="<td>1</td><td>2</td><td>3</td>";
+        str+="<tr>";
+        str+="</table>";
+        document.write(str,"<br>");
+        /*증감 연산자*/
+        num1=10;
+        num2=20;
+        num1--;
+        document.write(num1,"<br>");
+        num1++;
+        document.write(num1,"<br>");
+        result=num2++;
+        document.write(result,"<br>");
+        result=++num2;
+        document.write(result,"<br>");
+        /*비교 연산자*/
+        var a=10;
+        var b=20;
+        var c=10;
+        var f="20";
+        result=a>b;
+        document.write(result, "<br>");
+        result=a<b;
+        document.write(result, "<br>");
+        result=a<=b;
+        document.write(result, "<br>");
+        result=b==f;
+        document.write(result, "<br>");
+        result=a!=b;
+        document.write(result, "<br>");
+        result=a===f;
+        document.write(result, "<br>");
+        /*논리 연산자*/
+        var m=30;
+        var n=40;
+        result=a>b||b>=m||m>n;
+        document.write(result, "<br>");
+        result=a>b||b>=m||m<=n;
+        document.write(result, "<br>");
+        result=a<=b&&b>=m&&m<=n;
+        document.write(result, "<br>");
+        result=a<=b&&b<=m&&m<=n;
+        document.write(result, "<br>");
+        result=!(a>b);
+        document.write(result, "<br>");
+        /*삼항 조건 연산자*/
+        b=3;
+        result=a>b?"javascript":"hello";
+        document.write(result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
