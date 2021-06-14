@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 스코프</title>
+</head>
+<script>
+    var num = 100;
+    function menu() {
+        num+=100;
+        alert(num);
+    }
+    menu();
+
+    function menu() {
+        alert(num);
+    }
+
+    (function() {
+        var a = 100;
+        function me() {
+            num+=100;
+            alert(num);
+        }
+        me();
+    }());
+
+    (function() {
+        var a = 100;
+        function me() {
+            alert(num);
+        }
+    }());
+</script>
+<body>
+    
+</body>
+</html>

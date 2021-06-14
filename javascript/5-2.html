@@ -33,6 +33,16 @@
             var imgTag = document.getElementById("photo");
             imgTag.setAttribute("src", "images/pic_" + num + ".jpg");
         }
+
+        /*재귀함수*/
+        num = 0;
+        function testFnc() {
+            num++;
+            document.write(num, "<br>");
+            if(num==10) return;
+            testFnc();
+        }
+        testFnc();
     </script>
 </head>
 <body>
