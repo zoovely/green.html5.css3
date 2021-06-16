@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그리드</title>
+    <style>
+        .wrapper {
+            display: grid;
+            grid-template-columns: 200px 200px 200px;
+            /* grid-template-rows: minmax(100px auto); 최대 최소 사이즈 지정*/
+            grid-template-rows: 100px 200px;
+        }
+        .items {
+            padding: 10px;
+            background-color: #eee;
+        }
+        .items:nth-child(odd) {
+            background-color: #bbb;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="items">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero sed quisquam ut. Rem sed at aliquam. Odio quas, ab eos nobis fugiat ut magnam repudiandae? Repudiandae quisquam cum molestiae sint.</div>
+        <div class="items">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero sed quisquam ut. Rem sed at aliquam. Odio quas, ab eos nobis fugiat ut magnam repudiandae? Repudiandae quisquam cum molestiae sint.</div>
+        <div class="items">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero sed quisquam ut. Rem sed at aliquam. Odio quas, ab eos nobis fugiat ut magnam repudiandae? Repudiandae quisquam cum molestiae sint.</div>
+        <div class="items">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero sed quisquam ut. Rem sed at aliquam. Odio quas, ab eos nobis fugiat ut magnam repudiandae? Repudiandae quisquam cum molestiae sint.</div>
+        <div class="items">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero sed quisquam ut. Rem sed at aliquam. Odio quas, ab eos nobis fugiat ut magnam repudiandae? Repudiandae quisquam cum molestiae sint.</div>
+    </div>
+</body>
+</html>

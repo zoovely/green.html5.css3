@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그리드3</title>
+    <style>
+        .wrapper {
+            display: grid;
+            width: 700px;
+            grid-template-columns: repeat(3, 1fr); /*같은 비율로 n번 반복, 밑과 같음*/
+            grid-auto-rows: minmax(100px, auto);
+        }
+        .box {
+            padding: 15px;
+            background-color: #fff;
+            font-weight: bold;
+            text-align: center;
+        }
+        .box1 {
+            background-color: cornflowerblue;
+            /*열 시작 번호/열 끝 번호*/
+            grid-column: 1/4;
+        }
+        .box2 {
+            background-color: darkolivegreen;
+            /*행 시작 번호/행 끝 번호*/
+            grid-row: 2/4;
+        }
+        .box3 {
+            background-color: darkorange;
+            grid-column: 2/4;
+            grid-row-start: 2;
+            /*행 시작 번호*/
+        }
+        .box4 {
+            background-color: lemonchiffon;
+            grid-column-start: 3;
+            grid-row-start: 3;
+            /*열 시작, 행 시작 번호*/
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box box1">box1</div>
+        <div class="box box2">box2</div>
+        <div class="box box3">box3</div>
+        <div class="box box4">box4</div>
+    </div>
+</body>
+</html>

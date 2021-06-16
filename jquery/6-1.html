@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 선택자</title>
+</head>
+<body>
+    <div id="wrap">
+        <div id="inner_wrap">
+            <h1 class="tit2">제목</h1>
+            <h2 id="tit">선택자</h2>
+            <h3 class="tit">직접 선택자</h3>
+            <h1>제목2</h1>
+        </div>
+        <h1>제목3</h1>
+    </div>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            $("#tit").css("background-color","#ff0")
+            .css("border","2px solid #f00");
+            $(".tit").css("border","2px dashed #f0f");
+            $("h1").css("background-color", "#efe");
+            $("h1, .tit").css("color","blue");
+            $("h1.tit2").css("color","pink");
+            $("h1").parent().css("border","1px solid black");
+            $("#inner_wrap").parent().css("border", "1px solid red");
+            $("#wrap h1").css("border","1px solid purple");
+            $("#inner_wrap > h1").css("color", "grey");
+        });
+    </script>
+</body>
+</html>

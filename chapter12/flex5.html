@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>flex 그리드5</title>
+        <style>
+            .container {
+                display: flex;
+                background-color: #eee;
+                border: 1px solid #222;
+                margin-bottom: 20px;
+                width: 100%;
+                height: 150px;
+            }
+            .box1 {
+                align-self: flex-start;
+            }
+            .box2 {
+                align-self: flex-end;
+            }
+            .box3 {
+                align-self: center;
+            }
+            .box4 {
+                align-self: baseline;
+            }
+            .box5 {
+                align-self: stretch;
+            }
+            [class*=box] {
+                padding: 5px 45px;
+                margin: 5px;
+                background-color: #222;
+            }
+            p {
+                color: #fff;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box1"><p>1</p></div>
+            <div class="box2"><p>2</p></div>
+            <div class="box3"><p>3</p></div>
+            <div class="box4"><p>4</p></div>
+            <div class="box5"><p>5</p></div>
+        </div>
+    </body>
+    </html>

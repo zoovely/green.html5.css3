@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그리드2</title>
+    <style>
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /*같은 비율로 n번 반복, 밑과 같음*/
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            grid-column-gap: 30px;
+            grid-row-gap: 20px;
+        }
+        .items {
+            padding: 10px;
+            background-color: #eee;
+        }
+        .items:nth-child(odd) {
+            background-color: #bbb;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="items">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero sed quisquam ut. Rem sed at aliquam. Odio quas, ab eos nobis fugiat ut magnam repudiandae? Repudiandae quisquam cum molestiae sint.</div>
+        <div class="items">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero sed quisquam ut. Rem sed at aliquam. Odio quas, ab eos nobis fugiat ut magnam repudiandae? Repudiandae quisquam cum molestiae sint.</div>
+        <div class="items">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero sed quisquam ut. Rem sed at aliquam. Odio quas, ab eos nobis fugiat ut magnam repudiandae? Repudiandae quisquam cum molestiae sint.</div>
+        <div class="items">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero sed quisquam ut. Rem sed at aliquam. Odio quas, ab eos nobis fugiat ut magnam repudiandae? Repudiandae quisquam cum molestiae sint.</div>
+        <div class="items">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero sed quisquam ut. Rem sed at aliquam. Odio quas, ab eos nobis fugiat ut magnam repudiandae? Repudiandae quisquam cum molestiae sint.</div>
+        <div class="items">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero sed quisquam ut. Rem sed at aliquam. Odio quas, ab eos nobis fugiat ut magnam repudiandae? Repudiandae quisquam cum molestiae sint.</div>
+    </div>
+</body>
+</html>
