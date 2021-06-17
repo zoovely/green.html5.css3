@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 선택자</title>
+</head>
+<body>
+    <div id="wrap">
+        <div id="inner_wrap">
+            <h1>제목1</h1>
+            <p>내용1</p>
+            <p>내용2</p>
+            <h2>제목2</h2>
+        </div>
+        <div id="inner_wrap2">
+            <h1>제목3</h1>
+            <p>내용3</p>
+            <h3>제목4</h3>
+            <p>내용4</p>
+        </div>
+    </div>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            var style1 = {
+                "background-color" : "grey"
+            }
+            var style2 = {
+                "color" : "blue"
+            }
+            $("h2").prev().css(style1);
+            $("#inner_wrap > h1").next().css(style2);
+            $("#inner_wrap > h1").nextAll().css(style2);
+            $("#inner_wrap > h2").prevAll().css(style1);
+            $("#inner_wrap2 > h3").siblings().css(style2);
+            $("#inner_wrap2 > h3").prevUntil("h1").css(style1);
+            $("h3").parents().css("border","1px solid black");
+            $("h3").parents("#wrap").css("border","3px solid blue");
+            $("h3").closest("div").css("border","3px solid purple");
+        })
+    </script>
+</body>
+</html>
