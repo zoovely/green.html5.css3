@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수치 조작 메서드</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        #p1, #p2 {
+            width: 100px;
+            height: 50px;
+            padding: 20px;
+            border: 5px solid black;
+            background-color: cornflowerblue;
+        }
+        #box_wrap {
+            width: 300px;
+            height: 200px;
+            margin: 50px auto 0;
+            position: relative;
+            background-color: darksalmon;
+        }
+        .box {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            left: 100px;
+            top: 50px;
+            background-color: darkseagreen;
+        }
+        #wrap {
+            height: 5000px;
+            padding-top: 2000px;
+        }
+    </style>
+</head>
+<body>
+    <h1>수치 조작 메서드</h1>
+    <p id="p1">내용1</p>
+    <p id="p2">내용2</p>
+    <div id="box_wrap">
+        <p class="box">박스</p>
+    </div>
+    <p class="txt1">절대 top 위칫값: <span></span></p>
+    <p class="txt2">상대 top 위칫값: <span></span></p>
+    <div id="wrap">
+        <h1>위치 메서드</h1>
+    </div>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            var a = $("#p1").height();
+            console.log(a);
+            a = $("#p1").width();
+            console.log(a);
+            a = $("#p1").innerHeight();
+            console.log(a);
+            a = $("#p1").innerWidth();
+            console.log(a);
+            a = $("#p1").outerHeight();
+            console.log(a);
+            a = $("#p1").outerWidth();
+            console.log(a);
+            $("#p2").width(200);
+            $("#p2").height(100);
+            $("#p2").innerHeight(120);
+            $("#p2").innerWidth(220);
+            $("#p2").outerHeight(140);
+            $("#p2").outerWidth(240);
+
+            var b = $(".box").offset().top;
+            var c = $(".box").position().top;
+            $(".txt1 span").text(b);
+            $(".txt2 span").text(c);
+
+            c = $(window).scrollTop();
+            console.log(c);
+            $(window).scrollTop(3360);
+        })
+    </script>
+</body>
+</html>
