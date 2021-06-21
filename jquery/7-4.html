@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>키보드 이벤트</title>
+</head>
+<body>
+    <select id="rel_site">
+        <option value="">사이트 선택</option>
+        <option value="www.google.com">구글</option>
+        <option value="www.naver.com">네이버</option>
+        <option value="www.daum.net">다음</option>
+    </select>
+    <p class="txt"></p>
+
+    <p><input type="text" name="user_id" id="user_id"></p>
+
+    <h2>$(this)</h2>
+    <ul class="menuWrap_1">
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="#">메뉴3</a></li>
+    </ul>
+    <h2>Index()</h2>
+    <ul class="menuWrap_2">
+        <li><a href="#">메뉴4</a></li>
+        <li><a href="#">메뉴5</a></li>
+        <li><a href="#">메뉴6</a></li>
+    </ul>
+    <p class="idxNum"></p>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            $("#rel_site").on("change",function() {
+                $(".txt").text($(this).val());
+                //$(this)는 선택된 옵션을 가리킴
+            });
+
+            $(document).on("keydown",keyEventFnc);
+            function keyEventFnc(e) {
+                var direct="";
+                switch(e.keyCode) {
+                    case 37: direct="Left";
+                    break;
+                    case 38: direct="Top";
+                    break;
+                    case 39: direct="Right";
+                    break;
+                    case 40: direct="Bottom";
+                    break;   
+                }
+                if(direct) $("#user_id").val(direct);
+            };
+
+            $(".menuWrap_1 a").on("click",function(e) {
+                e.preventDefault();
+                $(".menuWrap_1 a").css("background-color","pink");
+                $(this).css("background-color","aqua");
+            });
+            $(".menuWrap_2 a").on("click",function(e) {
+                e.preventDefault();
+                $(".menuWrap_2 a").css("background-color","pink");
+                var idx = $(".menuWrap_2 a").index(this);
+                $(".menuWrap_2 a").eq(idx).css("background-color","aqua");
+                $(".idxNum").text(idx);
+            })
+        });
+    </script>
+</body>
+</html>

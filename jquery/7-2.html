@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 이벤트</title>
+</head>
+<body>
+    <p>
+        <a href="http://www.naver.com" class="btn1">버튼1</a>
+    </p>
+    <p class="txt1">내용1</p>
+    <p><a href="http://www.google.com" class="btn2">버튼2</a></p>
+    <p class="txt2">내용2</p>
+    <p><button class="btn3">버튼3</button></p>
+    <p class="txt3">내용3</p>
+
+    <h1>mouseout</h1>
+    <div id="box_1">
+        <p><a href="#">내용1</a></p>
+        <p><a href="#">내용2</a></p>
+        <p><a href="#">내용3</a></p>
+    </div>
+    <h1>mouseleave</h1>
+    <div id="box_2">
+        <p><a href="#">내용4</a></p>
+        <p><a href="#">내용5</a></p>
+        <p><a href="#">내용6</a></p>
+    </div>
+    <h1>mousemove</h1>
+    <p>X:<span class="posX">0</span>px</p>
+    <p>Y:<span class="posY">0</span>px</p>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            $(".btn1").on("click",function(e) {
+                e.preventDefault();
+                $(".txt1").css("background-color","pink");
+            });
+            $(".btn2").on("click",function(e) {
+                $(".txt2").css("background-color","cornflowerblue");
+            });
+            $(".btn3").on("dblclick",function() {
+                $(".txt3").css("background-color","blue");
+            });
+            $(".btn1").on({
+                "mouseover":function() {
+                    $(".txt1").css("color","red");
+                },
+                "mouseout":function() {
+                    $(".txt1").css("color","black");
+                }
+            });
+            $(".btn2").hover(function() {
+                $(".txt2").css("color","aqua");
+            }, function() {
+                $(".txt2").css("color","black");
+            });
+
+            $("#box_1").on("mouseout",function() {
+                $("#box_1").css("background-color","yellow");
+            });
+            $("#box_2").on("mouseleave",function() {
+                $("#box_2").css("background-color","pink");
+            });
+            $(document).on("mousemove",function(e) {
+                $(".posX").text(e.pageX);
+                $(".posY").text(e.pageY);
+            })
+        });
+    </script>
+</body>
+</html>
