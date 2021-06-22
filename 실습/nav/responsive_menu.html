@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./responsive_menu.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">WEB</a></li>
+            <li><a href="#">DESIGN</a></li>
+            <li><a href="#">MAP</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+        <a href="#" id="trigger">MENU</a>
+    </nav>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            var trigger = $('#trigger');
+            var menu = $('nav ul');
+            $(trigger).on("click",function(e) {
+                e.preventDefault();
+                menu.slideToggle(); //메뉴가 슬라이드 형식으로 나타나고 사라짐
+            });
+            $(window).resize(function() {
+                var w = $(window).width();
+                if(w > 320 && menu.is(':hidden')) {
+                    menu.removeAttr('style')
+                }
+            }); //브라우저 창의 사이즈가 바뀔때마다 적용 토글 슬라이드 후 pc 사이즈로 늘리면 display:none이 남아있어서 메뉴가 보이지 않으므로 스타일 제거 필요
+        })
+    </script>
+</body>
+</html>
