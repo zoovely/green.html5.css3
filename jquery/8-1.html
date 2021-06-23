@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>효과 메서드</title>
+    <style>
+        .content {
+            width: 400px;
+            background-color: #eee;
+        }
+
+        .txt1 {
+            background-color: aqua;
+        }
+        .txt2 {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <button class="btn1">Slide Up</button>
+        <button class="btn2">Fade In</button>
+    </p>
+    <p>
+        <button class="btn3">Toggle Slide</button>
+    </p>
+    <p>
+        <button class="btn4">Fade To(0.3)</button>
+        <button class="btn5">Fade To(1)</button>
+    </p>
+    <div class="box">
+        <div class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, minima perspiciatis. Tempora aliquid voluptatibus, officiis velit perferendis earum voluptatem facilis natus, repellat neque unde pariatur labore possimus numquam nihil quo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate consequatur quaerat dolores maxime, repellat eveniet dolorem non enim voluptatibus laborum commodi, aperiam laudantium corrupti tempora pariatur qui vel magni illo? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, laboriosam beatae! Animi corrupti facere porro pariatur culpa? Incidunt, autem sit maiores dolore accusamus quo nobis. Iusto, nulla? Officia, maiores ipsam?
+        </div>
+    </div>
+
+    <p><button class="btn_1">버튼1</button></p>
+    <span class="txt1">"500px" 이동</span>
+    <p><button class="btn_2">버튼2</button></p>
+    <span class="txt2">"50px"씩 이동</span>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            $(".btn2").hide();
+            $(".btn1").on("click", function() {
+                $(".box").slideUp(1000, "linear", function() { //slide up, 요소가 접히면서 숨겨짐
+                    $(".btn1").hide();
+                    $(".btn2").show();
+                });
+            });
+            $(".btn2").on("click",function() {
+                $(".box").fadeIn(1000, "swing", function() { //fade in, 숨겨진 요소가 점점 선명해짐
+                    $(".btn2").hide();
+                    $(".btn1").show();
+                });
+            });
+            $(".btn3").on("click",function() {
+                $(".box").slideToggle(500,"linear"); //slideToggle, 사라져있으면 나타나고 나타나있으면 사라짐 (슬라이드 방식으로)
+            });
+            $(".btn4").on("click",function() {
+                $(".box").fadeTo("fast", 0.3); //fadeTo, 지정 투명도 적용
+            });
+            $(".btn5").on("click",function() {
+                $(".box").fadeTo("fast", 1);
+            });
+
+            $(".btn_1").on("click",function() { 
+                $(".txt1").animate({ //{스타일 속성}, 소요시간, 가속도, 콜백함수
+                    marginLeft:"500px",
+                    fontSize:"30px"
+                }, 2000, "linear", function() {
+                    alert("모션 완료!");
+                });
+            });
+            $(".btn_2").on("click",function() {
+                $(".txt2").animate({
+                    marginLeft:"+=50px" //50px씩 왼쪽 마진 추가
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>

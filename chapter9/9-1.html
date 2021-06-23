@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변형 속성 기본</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            /* -ms-transition-duration: 2s;
+            -moz-transition-duration: 2s;
+            -webkit-transition-duration: 2s; 구형 브라우저 호환용*/
+            transition-duration: 2s;
+        }
+        .box:hover {
+            width: 200px;
+            height: 200px;
+        }
+        .box:active {
+            background-color: red;
+        }
+
+        #graph {
+            width: 610px;
+            border: 3px solid black;
+        }
+        .bar {
+            width: 10px;
+            height: 50px;
+            background-color: orange;
+            margin: 5px;
+            transition-duration: 5s;
+        }
+        #graph:hover > .bar {
+            width: 600px;
+        }
+        .bar:nth-child(1) {
+            transition-delay: 0s;
+            transition-timing-function: linear;
+        }
+        .bar:nth-child(2) {
+            transition-delay: 1s;
+            transition-timing-function: ease;
+        }
+        .bar:nth-child(3) {
+            transition-delay: 2s;
+            transition-timing-function: ease-in;
+        }
+        .bar:nth-child(4) {
+            transition-delay: 3s;
+            transition-timing-function: ease-out;
+        }
+        .bar:nth-child(5) {
+            transition-delay: 4s;
+            transition-timing-function: ease-in-out;
+        }
+
+        #graph2 {
+            width: 610px;
+            border: 3px solid black;
+        }
+        .bar2 {
+            width: 10px;
+            height: 50px;
+            background-color: orange;
+            margin: 5px;
+            transition-property: background-color, width;
+            transition-duration: 1s, 5s;
+            /* transition: background-color 1s ease, width 5s linear 1s; 
+            한번에 묶어서 표기하는 방법, 속성이 많을 때는 따로 표기하는 것을 추천*/
+        }
+        #graph2:hover > .bar2:nth-child(1) {
+            background-color: red;
+            width: 100px;
+        }
+        #graph2:hover > .bar2:nth-child(2) {
+            background-color: blue;
+            width: 300px;
+        }
+        #graph2:hover > .bar2:nth-child(3) {
+            background-color: green;
+            width: 400px;
+        }
+        #graph2:hover > .bar2:nth-child(4) {
+            background-color: yellow;
+            width: 200px;
+        }
+        #graph2:hover > .bar2:nth-child(5) {
+            background-color: pink;
+            width: 400px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+    <h1>Transition Graph</h1>
+    <div id="graph">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <h1>Transition Graph</h1>
+    <div id="graph2">
+        <div class="bar2"></div>
+        <div class="bar2"></div>
+        <div class="bar2"></div>
+        <div class="bar2"></div>
+        <div class="bar2"></div>
+    </div>
+</body>
+</html>

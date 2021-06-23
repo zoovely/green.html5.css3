@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션 효과 제어 메서드</title>
+    <style>
+        p {width: 110px; text-align: center;}
+        .txt1 {background-color: aqua;}
+        .txt2 {background-color: pink;}
+        .txt3 {background-color: palevioletred;}
+        .txt4 {background-color: peachpuff;}
+        .txt5 {background-color: palegoldenrod;}
+    </style>
+</head>
+<body>
+    <p class="txt1">효과1</p>
+    <p class="txt2">효과2<br>delay(3000)</p>
+    <p><button class="btn1">50px 전진</button></p>
+    <p class="txt3">효과3</p>
+    <p class="txt4">효과4<br>stop()</p>
+    <p class="txt5">효과5<br>stop(true, true)</p>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            $(".txt1").animate({
+                marginLeft:"300px"
+            }, 1000);
+
+            $(".txt2").delay(3000).animate({
+                marginLeft:"300px"
+            }, 1000);
+
+            //미완성
+        })
+    </script>
+</body>
+</html>
