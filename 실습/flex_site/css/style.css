@@ -185,6 +185,16 @@ section:nth-child(odd) {
     border: 1px solid #aaa;
 }
 
+@media screen and (min-width: 764px) {
+    .program-list {
+        display: flex;
+        justify-content: space-between;
+    }
+    .program {
+        flex-basis: 22%;
+    }
+}
+
 /*푸터*/
 .footer {
     padding-top: 30px;
@@ -206,4 +216,18 @@ section:nth-child(odd) {
 }
 .sns a:last-child {
     margin-right: 0;
+}
+
+@media screen and (min-width: 764px) {
+    .footer-info {
+        max-width: 1300px;
+        display: flex;
+    }
+    .contact {
+        flex: 2;
+    }
+    .sns {
+        flex: 1;
+    }
+    /*contact 와 sns를 2:1 비율로 나눠줌*/
 }

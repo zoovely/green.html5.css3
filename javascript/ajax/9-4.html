@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="../jquery/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            var url = "https://api.openweathermap.org/data/2.5/weather";
+            url += "?q=" + "gimpo-si";
+            url += "&appid=" + "cc0550cd016d08a5e18271512cdf4dd1";
+            url += "&lang" + "kr";
+
+            $.ajax({
+                type: "GET",
+                url: url,
+                dataType: "json",
+                success: function(data) {
+                    var weather = data;
+                    console.log(weather.coord.lat); //데이터 안에 coord라는 객체 안에 lat 항목
+                    console.log(weather.weather[0].description);
+                    console.log(weather.name);
+                    console.log(weather.wind.speed);
+                },
+                error: function(request, status, error) {
+                    console.log("code: "+request.status);
+                    console.log("message: "+request.responseText);
+                    console.log("error: "+error);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

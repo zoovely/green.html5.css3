@@ -11,13 +11,13 @@
 <body>
     <!--내비게이션-->
     <nav>
+        <a href="$" id="trigger">MENU</a>
         <ul>
             <li><a href="#">처음으로</a></li>
             <li><a href="#">코딩이란</a></li>
             <li><a href="#">왜 코딩 교육인가</a></li>
             <li><a href="#">교육 프로그램</a></li>
         </ul>
-        <a href="$" id="trigger">MENU</a>
     </nav>
     <!--헤더-->
     <section>
@@ -107,5 +107,19 @@
 
     <script src="./js/jquery-3.6.0.min.js"></script>
     <script src="./js/jquery.bxslider.min.js"></script>
+    <script>
+        $(function() {
+            var trigger = $("#trigger");
+            var menu = $("nav ul");
+            $(trigger).on("click", function(e) {
+                e.preventDefault(); /*링크의 기본값(href)를 막아줌*/
+                menu.slideToggle();
+            });
+            $(".bxslider").bxSlider({
+                auto:true,
+                autoHover:true
+            });
+        });
+    </script>
 </body>
 </html>

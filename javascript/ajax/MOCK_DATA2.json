@@ -1,0 +1,10 @@
+[{"id":1,"first_name":"Nicola","last_name":"Cadden","email":"ncadden0@fda.gov","gender":"Male","password":1},
+{"id":2,"first_name":"Catarina","last_name":"Leggatt","email":"cleggatt1@flickr.com","gender":"Genderfluid","password":2},
+{"id":3,"first_name":"Clevey","last_name":"Di Ruggero","email":"cdiruggero2@vistaprint.com","gender":"Non-binary","password":3},
+{"id":4,"first_name":"Armin","last_name":"Curr","email":"acurr3@google.fr","gender":"Genderqueer","password":4},
+{"id":5,"first_name":"Haskel","last_name":"Arundel","email":"harundel4@auda.org.au","gender":"Non-binary","password":5},
+{"id":6,"first_name":"Court","last_name":"Pimme","email":"cpimme5@parallels.com","gender":"Polygender","password":6},
+{"id":7,"first_name":"Martica","last_name":"Preshous","email":"mpreshous6@networksolutions.com","gender":"Male","password":7},
+{"id":8,"first_name":"Cliff","last_name":"Mollnar","email":"cmollnar7@istockphoto.com","gender":"Non-binary","password":8},
+{"id":9,"first_name":"Glenn","last_name":"Gives","email":"ggives8@home.pl","gender":"Non-binary","password":9},
+{"id":10,"first_name":"Trudie","last_name":"Appleyard","email":"tappleyard9@google.nl","gender":"Agender","password":10}]

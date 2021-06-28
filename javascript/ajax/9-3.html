@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div clsss="wrap">
+        <h2>회원 정보</h2>
+        <p>
+            <span>ID: </span>
+            <span class="id"></span>
+        </p>
+        <p>
+            <span>EMAIL: </span>
+            <span class="email"></span>
+        </p>
+        <p>
+            <span>FIRST NAME: </span>
+            <span class="first"></span>
+        </p>
+        <p>
+            <span>LAST NAME: </span>
+            <span class="last"></span>
+        </p>
+    </div>
+    <script src="../jquery/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            $.ajax({
+                url:"./MOCK_DATA2.json",
+                dataType:"json",
+                success: function(data) {
+                    if(data.length>0) {
+                        for(var i in data) {
+                            var $id = data[i].id;
+                            var $first_name = data[i].first_name;
+                            var $last_name = data[i].last_name;
+                            var $email = data[i].email;
+                            var $password = data[i].password;
+                        }
+                    }
+                    $(".id").text($id);
+                    $(".email").text($email);
+                    $(".first").text($first_name);
+                    $(".last").text($last_name);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
