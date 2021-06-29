@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../images/mo-DP0LMBAIzZQ-unsplash.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family:'Times New Roman', Times, serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.nav-item {
+    list-style: none;
+    float: left;
+}
+
+.nav-link {
+    font-size: 1.5em;
+}
+
+.nav-link img {
+    width: 150px;
+}
+
+.nav-link:not(:nth-child(3)) {
+    margin-top: 30px;
+} /*?????*/
+
