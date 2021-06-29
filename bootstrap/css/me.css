@@ -11,31 +11,21 @@ html {
     font-family:'Times New Roman', Times, serif;
 }
 
-a {
-    text-decoration: none;
-    color: white;
-}
-
 .nav {
-    display: flex;
     justify-content: space-around;
-    margin-top: 20px;
 }
 
-.nav-item {
-    list-style: none;
-    float: left;
-}
-
-.nav-link {
+.nav-item:not(:nth-child(3)) {
+    margin-top: 30px;
     font-size: 1.5em;
 }
 
-.nav-link img {
-    width: 150px;
+.nav-item a {
+    color: white;
 }
 
-.nav-link:not(:nth-child(3)) {
-    margin-top: 30px;
-} /*?????*/
-
+.page-header {
+    color: white;
+    text-align: center;
+    margin-top: 200px;
+}
