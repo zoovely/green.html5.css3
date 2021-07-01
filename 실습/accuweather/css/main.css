@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+/*index.html에 적용될 css*/
+
+#main_content {
+    background: #D8D8D8;
+}
+#mian_content > div {
+    width: 960px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#main_content > #main_container > section {
+    width: 730px;
+    float: left;
+}
+#main_content > #main_container > section > article {
+    width: 90%;
+}
+#main_content > #main_container > section > #weather_map {
+    height: 400px;
+    margin-bottom: 20px;
+    background: white;
+}
+#main_content > #main_container > section > #weather_map > #map {
+    width: 90%;
+    height: 360px;
+    z-index: 0 !important; /*지도 index는 반드시 강제 지정 해줘야함*/
+    margin: 0 auto;
+}
+#main_content > #main_container > section > #weather_location {
+    height: 400px;
+    margin-bottom: 20px;
+    background: #D8D8D8;
+}
+#main_content > #main_container > section > #weather_location a {
+    display: inline-block;
+    width: calc(50%-8px);
+    height: 51px;
+    background: white;
+    margin: 2px;
+}
+#main_content > #main_container > section > #weather_location a span {
+    display: inline-block;
+    font-size: 18px;
+}
+#main_content > #main_container > section > #weather_location a span:nth-child(1) {
+    width: 60%;
+}
+#main_content > #main_container > section > #weather_location a span:nth-child(2) {
+    width: 20%;
+}
+#main_content > #main_container > section > #weather_location a span:nth-child(3) {
+    width: 15%;
+}
+#main_content > #main_container > section > #weather_location a img {
+    width: 30px;
+    height: 30px;
+}
+#main_content > #main_container > section > #weather_add {
+    height: 50px;
+    margin-bottom: 20px;
+    background: white;
+}
+#main_content > #main_container > aside {
+    width: 210px;
+    float: right;
+}
+
+@media screen and (max-width: 767px) {
+    #main_content > div {
+        width: 100%;
+    }
+    #main_content > #main_container > section {
+        width: 100%;
+    }
+    #main_content > #main_container > section > article {
+        width: 100%;
+    }
+    #main_content > #main_container > section > #weather_location a {
+        width: 100%;
+    }
+    #main_content > #main_container > aside {
+        float: none;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #main_content > div {
+        width: 100%;
+    }
+    #main_content > #main_container > section {
+        width: clac(100%-210px);
+    }
+}
+@media screen and (min-width: 1024px) {
+    
+}
