@@ -106,6 +106,7 @@ ul {list-style: none;}
 .disappear {
     animation: fade-out 0.5s;
 }
+
 @keyframes fade-in {
     from {
         opacity: 0;
